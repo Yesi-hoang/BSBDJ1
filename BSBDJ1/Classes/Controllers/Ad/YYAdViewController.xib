@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYAdViewController">
+            <connections>
+                <outlet property="contentImageView" destination="RMZ-wp-1Bd" id="BIr-CK-Cf9"/>
+                <outlet property="jumpButton" destination="hHh-ne-cUc" id="xzN-DR-KOi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMZ-wp-1Bd">
+                    <rect key="frame" x="0.0" y="-8" width="600" height="600"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explosion" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-w6-4RW">
+                    <rect key="frame" x="225" y="175" width="150" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="Vyo-b4-PId"/>
+                        <constraint firstAttribute="width" constant="150" id="aC1-dt-fRV"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-ne-cUc" customClass="ZHRPropertyButton">
+                    <rect key="frame" x="490" y="30" width="80" height="30"/>
+                    <color key="backgroundColor" red="0.98405934343434343" green="0.69356948088068893" blue="0.31898024446183015" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="5NI-YU-RBM"/>
+                        <constraint firstAttribute="height" constant="30" id="FmP-Ut-WQL"/>
+                    </constraints>
+                    <state key="normal" title="跳过：5s">
+                        <color key="titleColor" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="1" green="0.3985741138458252" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="jumpButtonClick:" destination="-1" eventType="touchUpInside" id="Zgv-Cu-VFE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Yan-w6-4RW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0Cz-Yh-xd3"/>
+                <constraint firstAttribute="trailing" secondItem="hHh-ne-cUc" secondAttribute="trailing" constant="30" id="Bai-xv-GJu"/>
+                <constraint firstAttribute="bottom" secondItem="RMZ-wp-1Bd" secondAttribute="bottom" id="YBW-SL-nYN"/>
+                <constraint firstItem="RMZ-wp-1Bd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bcK-dM-MHh"/>
+                <constraint firstItem="Yan-w6-4RW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eDV-c2-WN3"/>
+                <constraint firstAttribute="trailing" secondItem="RMZ-wp-1Bd" secondAttribute="trailing" id="kko-bs-b4R"/>
+                <constraint firstItem="RMZ-wp-1Bd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ra4-fF-IXv"/>
+                <constraint firstItem="hHh-ne-cUc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="v1y-aW-Zhg"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="explosion" width="483" height="220"/>
+    </resources>
+</document>

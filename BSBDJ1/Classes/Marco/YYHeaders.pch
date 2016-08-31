@@ -1,0 +1,53 @@
+//
+//  YYHeaders.pch
+//  BSBDJ1
+//
+//  Created by Yesi on 16/8/17.
+//  Copyright © 2016年 Yesi. All rights reserved.
+//
+
+#ifndef YYHeaders_pch
+#define YYHeaders_pch
+
+#ifdef __OBJC__
+// Log output
+#ifdef DEBUG
+#define YYLog(...) NSLog(__VA_ARGS__)
+#else
+#define YYLog(...)
+#endif
+
+// FunctionLog
+#define YYLogFunc YYLog(@"%s", __func__);
+
+// Color
+#define YYARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define YYColor(r, g, b) YYARGBColor(255, (r), (g), (b))
+#define YYGrayColor(v) YYColor((v), (v), (v))
+#define YYCommonBgColor YYGrayColor(215)
+#define YYRandomColor YYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+
+// WeakSelf
+#define YYWeakSelf __weak typeof(self) weakSelf = self;
+
+// Write data to desktop as plist
+#define YYWriteToPlist(data, filename) [data writeToFile:[NSString stringWithFormat:@"/Users/YY/Desktop/%@.plist", filename] atomically:YES];
+
+// ScreenSize
+#define YYScreenW [UIScreen mainScreen].bounds.size.width
+#define YYScreeH [UIScreen mainScreen].bounds.size.height
+
+
+// Catefory
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+
+#import "YYConst.h"
+
+
+#endif
+
+
+#endif /* YYHeaders_pch */
